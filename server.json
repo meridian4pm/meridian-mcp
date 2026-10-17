@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.meridian4pm/meridian",
+  "title": "Meridian",
+  "description": "Project management (PMO) data for AI: projects, risks, status reports, time tracking.",
+  "version": "1.0.0",
+  "websiteUrl": "https://www.meridian4pm.com/mcp-server",
+  "repository": {
+    "url": "https://github.com/meridian4pm/meridian-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://www.meridian4pm.com/icon.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": ["any"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://www.meridian4pm.com/api/mcp"
+    }
+  ]
+}
