@@ -60,7 +60,7 @@ Read (scope `read:core`):
 | Projects and milestones | `list_projects`, `get_project`, `list_milestones` |
 | Risks and change requests | `get_risk_register`, `list_change_requests` |
 | Status reports | `get_status_report`, `get_status_report_context` (Admins and Scrum Masters) |
-| Your time | `list_time_entries`, `get_timesheet_summary`, `list_time_projects`, `list_time_tags` |
+| Your time | `list_time_entries`, `get_timesheet_summary`, `list_time_projects`, `list_time_tags`, `get_active_timer` |
 | Team | `get_team_status` (Admins), `list_resources`, `get_my_access` |
 | Stakeholders | `list_stakeholders`, `get_stakeholder` |
 | Retrospectives | `list_retrospectives`, `get_retrospective`, `list_retro_action_items` |
@@ -71,7 +71,9 @@ Write (need the organization's writes switch):
 | Tool | Scope | Who |
 | --- | --- | --- |
 | `create_time_entry`, `update_time_entry` | `write:time-tracking` | Admins, Scrum Masters, Members |
+| `start_timer`, `update_active_timer`, `stop_timer`, `discard_timer` | `write:time-tracking` | Admins, Scrum Masters, Members |
 | `create_status_report` | `write:status-reports` | Admins, Scrum Masters |
+| `report_meridian_issue` (send a bug report or feature request to the Meridian team) | `read:core` | Anyone who can connect |
 
 Writes can be previewed first, a retry never creates a duplicate, and edits refuse to overwrite a
 change made since you last looked.
